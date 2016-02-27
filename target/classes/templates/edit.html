@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Edit lead</title>
+</head>
+<body>
+
+	<form th:object="${lead}" th:action="@{/lead/update}" method="POST">
+		<input type="hidden" name="id" th:field="*{id}" />
+		<input type="text" name="name" th:field="*{name}" />
+		<textarea name="description" th:field="*{description}"></textarea>
+		<input type="submit" value="Opdater" />
+	</form>
+
+</body>
+</html>

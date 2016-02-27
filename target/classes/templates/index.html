@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>FP CRM</title>
+</head>
+<body>
+	
+	<h1>Hello World!</h1>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Navn</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="lead : ${leads}">
+				<td th:text="${lead.id}">Lead ID</td>
+				<td th:text="${lead.name}">Lead name</td>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>
